@@ -396,6 +396,28 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+
+    // Build control to push dist code to github
+    buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:kaymmm/AsAminNYC.git',
+          branch: 'gh-pages'
+        }
+      },
+      local: {
+        options: {
+          remote: '../',
+          branch: 'build'
+        }
+      }
     }
   });
 
@@ -457,6 +479,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
-    'build'
+    'build',
+    'buildcontrol:pages'
   ]);
 };
