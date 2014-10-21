@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>AsAminNYC</title>
     <meta name="description" content="">
@@ -20,12 +21,15 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
-  </head>
-  <body id="page-top" class="index">
+</head>
+
+<body id="page-top" class="index">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <div id="HlogoMini" class="hidden-xs">
+        <a id="portal-logo" accesskey="1" href="http://www.hunter.cuny.edu"></a>
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -37,7 +41,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="images/logo.png" alt="Asian Americans in New York: Film &amp; Literature" height="100%"></a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="images/logo.png" alt="Asian Americans in New York: Film &amp; Literature">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -73,17 +79,19 @@
         <div class="container">
             <div class="intro-text">
                 <div class="jumbotron" style="background: rgba(0,0,0,0.7);">
-                  <p>That noodle place had become hot after it had been reviewed in the New York Times. It had been praised for being authentic while accommodating the Western palate. But the menu priced out anyone who actually lived or worked in Chinatown.
-                  <hr style="width: 80px;"/>
+                    <p>That noodle place had become hot after it had been reviewed in the New York Times. It had been praised for being authentic while accommodating the Western palate. But the menu priced out anyone who actually lived or worked in Chinatown.</p>
+                    <hr style="width: 80px;" />
 
-                  <span>Ed Lin, <em>This Is A Bust</em></span></p>
+                    <span>Ed Lin,
+                        <em>This Is A Bust</em>
+                    </span>
                 </div>
                 <a href="#about" class="page-scroll btn btn-xl"><i class="fa fa-angle-down fa-2x"></i></a>
             </div>
         </div>
     </header>
 
-    <!-- Services Section -->
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="row">
@@ -102,31 +110,31 @@
         </div>
     </section>
 
-    <!-- Portfolio Grid Section -->
-    <section id="overview" class="bg-light-gray">
+    <!-- Program Overview Section -->
+    <section id="overview" class="parallax" data-speed="0.4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Program Overview</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    <div class="col-sm-6 text-right">
-                      <p>Drawing on contemporary Asian American film, video and literature, this interdisciplinary seminar for K-12 teachers will provide participants with a twenty-first century perspective on Asian American cultural production and communities in New York City. Against the backdrop of generation-shifting conversations around immigration reform, demographic change, and the ascendancy of Asian American writers and filmmakers, the seminar will examine Asian American communities and the arts in new and critical ways, and in so doing locate teaching tools which harness the complexity, diversity and dynamism of this rapidly growing population. All materials will examine these questions through the lens of New York City – that multicultural urban social laboratory which has for centuries acted as the crucible from which American identity has been shaped and challenged.</p>
-                      <p>The two-week seminar will meet Monday through Friday for morning, afternoon, and occasional evening sessions, with readings, lectures and seminar discussion interwoven with relevant field visits.</p>
+                    <div class="col-sm-6 text-right text-left-xs">
+                        <p>Drawing on contemporary Asian American film, video and literature, this interdisciplinary seminar for K-12 teachers will provide participants with a twenty-first century perspective on Asian American cultural production and communities in New York City. Against the backdrop of generation-shifting conversations around immigration reform, demographic change, and the ascendancy of Asian American writers and filmmakers, the seminar will examine Asian American communities and the arts in new and critical ways, and in so doing locate teaching tools which harness the complexity, diversity and dynamism of this rapidly growing population. All materials will examine these questions through the lens of New York City – that multicultural urban social laboratory which has for centuries acted as the crucible from which American identity has been shaped and challenged.</p>
+                        <p>The two-week seminar will meet Monday through Friday for morning, afternoon, and occasional evening sessions, with readings, lectures and seminar discussion interwoven with relevant field visits.</p>
                     </div>
                     <div class="col-sm-6">
-                      <img class="alignnone" src="http://www.searac.org/sites/default/files/photo.jpg" alt="" width="100%" />
+                        <img class="img-responsive" src="http://www.searac.org/sites/default/files/photo.jpg" alt="" />
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- Timeline Section -->
+    <section id="timeline">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
+                    <h2 class="section-heading">Timeline</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
@@ -202,57 +210,64 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="bg-light-gray">
+    <!-- Staff Section -->
+    <section id="staff" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
+                    <h2 class="section-heading">Who We Are</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
+                        <img src="images/team/jennifer-hayashida.jpg" class="img-responsive img-circle" alt="Jennifer Hayashida">
+                        <h4>Jennifer Hayashida</h4>
+                        <p class="text-muted">Program Co-Director</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="#" class='confusalator' data-a='jennifer&#46;hayashida' data-b='hunter.cuny' data-c='edu'><i class="fa fa-envelope"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
+                        <img src="images/team/chi-hui-yang.jpg" class="img-responsive img-circle" alt="Chi-Hui Yang">
+                        <h4>Chi-Hui Yang</h4>
+                        <p class="text-muted">Program Co-Director</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="#" class='confusalator' data-a='chihui&#46;yang' data-b='g&#109;ail' data-c='com'><i class="fa fa-envelope"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="images/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
+                        <img src="images/team/melissa-phruksachart.jpg" class="img-responsive img-circle" alt="Melissa Phruksachart">
+                        <h4>Melissa Phruksachart</h4>
+                        <p class="text-muted">Program Manager</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="#" class='confusalator' data-a='m&#46;phruksachart' data-b='g&#109;ail' data-c='com'><i class="fa fa-envelope"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="images/team/keith-miyake.jpg" class="img-responsive img-circle" alt="Keith Miyake">
+                        <h4>Keith Miyake</h4>
+                        <p class="text-muted">Webmaster</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#" class='confusalator' data-a='keith&#46;miyake' data-b='g&#109;ail' data-c='com'><i class="fa fa-envelope"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -266,29 +281,24 @@
         </div>
     </section>
 
-    <!-- Clients Aside -->
+    <!-- Logos Aside -->
     <aside class="clients">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="images/logos/envato.jpg" class="img-responsive img-centered" alt="">
+                <div class="col-xs-6 col-md-offset-3 col-md-3">
+                    <a href="http://www.neh.gov/">
+                        <img src="images/logos/neh_logo_horizontal_lightbg.png" class="img-responsive img-centered" alt="The National Endowment for the Humanities">
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="images/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
+                <div class="col-xs-6 col-md-3">
+                    <a href="http://www.hunter.cuny.edu">
+                        <img src="images/logos/hunter_is_cuny.jpg" class="img-responsive img-centered" alt="Hunter College, CUNY">
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="images/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="images/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p>Any views, findings, conclusions, or recommendations expressed in this program do not necessarily represent those of the National Endowment for the Humanities.</p>
                 </div>
             </div>
         </div>
@@ -557,11 +567,11 @@
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/contact_me.js"></script>
-        <!--<script src="scripts/cbpAnimatedHeader/classie.js"></script>
-        <script src="scripts/cbpAnimatedHeader/cbpAnimatedHeader.js"></script>-->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/contact_me.js"></script>
+    <script src="scripts/confusalator.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
