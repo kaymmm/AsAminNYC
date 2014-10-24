@@ -12,7 +12,7 @@ $(function() {
         event.preventDefault();
         return 0;
       }
-      var nudge = $.attr(this, 'href') === '#about' ? 50 : 0;
+      var nudge = $.attr(this, 'href') === '#about' ? 50 : 2;
         $('html, body').stop().animate({
             scrollTop: $($.attr(this, 'href')).offset().top - $('.navbar').height() + nudge
         }, 1500, 'easeInOutExpo');
