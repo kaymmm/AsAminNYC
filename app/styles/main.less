@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-@media(min-width:768px) {
+@media(min-width:480px) {
     .navbar-default {
     	background-color: transparent;
         padding: 25px 0;
@@ -275,81 +275,252 @@ section {
 	text-transform: none;
 }
 
-// Overvies Section
-
-#overview {
-	background-image: url('../images/bk-bridge.jpg');
-	background-repeat: none;
-	background-attachment: fixed;
-	background-position: -20px center;
-	.background-cover;
-	text-align: center;
-	color: white;
-	/*
-    .portfolio-item {
-        margin: 0 0 15px;
-        right: 0;
-        .portfolio-link {
-            display: block;
-            position: relative;
-            max-width: 400px;
-            margin: 0 auto;
-            .portfolio-hover {
-                background: fade(@brand-primary, 90%);
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                transition: all ease 0.5s;
-                -webkit-transition: all ease 0.5s;
-                -moz-transition: all ease 0.5s;
-                &:hover {
-                    opacity: 1;
-                }
-                .portfolio-hover-content {
-                    position: absolute;
-                    width: 100%;
-                    height: 20px;
-                    font-size: 20px;
-                    text-align: center;
-                    top: 50%;
-                    margin-top: -12px;
-                    color: white;
-                    i {
-                        margin-top: -12px;
-                    }
-                    h3,
-                    h4 {
-                        margin: 0;
-                    }
-                }                
-            }            
-        }
-        .portfolio-caption {
-        	max-width: 400px;
-        	margin: 0 auto;
-        	background-color: white;
-        	text-align: center;
-        	padding: 25px;
-        	h4 {
-        		text-transform: none;
-        		margin: 0;
-        	}
-        	p {
-        		.serif-font;
-        		font-style: italic;
-        		font-size: 16px;
-        		margin: 0;
-        	}
-        }
-    }
-    * {
-        z-index: 2;
-    }
-    */
+// Overview Section
+@media(max-width:768px) {
+	#overview {
+		background-color: @gray;
+		color: white;
+	}
+}
+@media(min-width:768px) {
+	#overview {
+		background-color: @gray-darkest;
+		background-image: url('../images/bk-bridge.jpg');
+		background-repeat: all;
+		background-attachment: fixed;
+		background-position: -20px center;
+		.background-cover;
+		text-align: center;
+		color: white;
+		/*
+	    .portfolio-item {
+	        margin: 0 0 15px;
+	        right: 0;
+	        .portfolio-link {
+	            display: block;
+	            position: relative;
+	            max-width: 400px;
+	            margin: 0 auto;
+	            .portfolio-hover {
+	                background: fade(@brand-primary, 90%);
+	                position: absolute;
+	                width: 100%;
+	                height: 100%;
+	                opacity: 0;
+	                transition: all ease 0.5s;
+	                -webkit-transition: all ease 0.5s;
+	                -moz-transition: all ease 0.5s;
+	                &:hover {
+	                    opacity: 1;
+	                }
+	                .portfolio-hover-content {
+	                    position: absolute;
+	                    width: 100%;
+	                    height: 20px;
+	                    font-size: 20px;
+	                    text-align: center;
+	                    top: 50%;
+	                    margin-top: -12px;
+	                    color: white;
+	                    i {
+	                        margin-top: -12px;
+	                    }
+	                    h3,
+	                    h4 {
+	                        margin: 0;
+	                    }
+	                }
+	            }
+	        }
+	        .portfolio-caption {
+	        	max-width: 400px;
+	        	margin: 0 auto;
+	        	background-color: white;
+	        	text-align: center;
+	        	padding: 25px;
+	        	h4 {
+	        		text-transform: none;
+	        		margin: 0;
+	        	}
+	        	p {
+	        		.serif-font;
+	        		font-style: italic;
+	        		font-size: 16px;
+	        		margin: 0;
+	        	}
+	        }
+	    }
+	    * {
+	        z-index: 2;
+	    }
+	    */
+	}
 }
 
-@media(min-width:767px) {
+.slide-away {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	//height: 100%;
+	transition: all 0.3s;
+	&.oncanvas {
+		left: 0;
+	}
+	&.offcanvas {
+		left: -400%;
+	}
+}
+
+.slide-replace {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	transition: all 0.3s;
+	&.oncanvas {
+		left: 0;
+	}
+	&.offcanvas {
+		left: 300%;
+	}
+}
+
+.slide-panel {
+	position: relative;
+	transition: all 0.3s;
+}
+
+.timeline-body {
+	transition: all 0.3s;
+	.offcanvas {
+		display: none
+	}
+}
+
+// Split text into columns based on responsive breakpoints
+@media(max-width:479px) {
+	.textcol-xs {
+		&-2 {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+		&-3 {
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+	}
+}
+
+@media(min-width:480px) {
+	.textcol-sm {
+		&-2 {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+		&-3 {
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+	}
+}
+
+@media(min-width:768px) {
+	.textcol-md {
+		&-2 {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+		&-3 {
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+	}
+}
+
+@media(min-width:992px) {
+	.textcol-lg {
+		&-2 {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+		&-3 {
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+		&-4 {
+			-webkit-column-count: 4;
+			-moz-column-count: 4;
+			column-count: 4;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+	}
+}
+
+@media(min-width:1200px) {
+	.textcol-xl {
+		&-2 {
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+		&-3 {
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+		&-4 {
+			-webkit-column-count: 4;
+			-moz-column-count: 4;
+			column-count: 4;
+			-webkit-column-gap: 3%; /* Saf3, Chrome*/
+			-moz-column-gap: 3%; /* FF3.5+ */
+			column-gap: 3%; /* Opera 11+*/
+		}
+	}
+}
+
+@media(min-width:768px) {
     #portfolio {
         .portfolio-item {
             margin: 0 0 30px;
@@ -610,7 +781,7 @@ section#contact {
 	   font-weight: 700;
 	   color: @placeholder-text;
 	}
-	:-ms-input-placeholder {  
+	:-ms-input-placeholder {
 	   .heading-font;
 	   font-weight: 700;
 	   color: @placeholder-text;
@@ -735,8 +906,8 @@ ul.social-buttons {
                 -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index:1052;
-            }            
-        }        
+            }
+        }
     }
 }
 
