@@ -49,12 +49,13 @@ $(function(){
 // Initialize sliding panel
 $('.toggle-panel').click(function() {
   var $container = $($(this).data('container'));
-  var $target = $($container.children($(this).data('target')));
+  var $target = $($container.find($(this).data('target')));
 
   $target.toggleClass('offcanvas');
   $target.toggleClass('oncanvas');
+  console.log($container.find('.oncanvas'));
   if ($container.find('.oncanvas').length !== 0) {
-    $container.css('height',$container.children('.oncanvas').height());
+    $container.css('height',$container.find('.oncanvas').height());
   } else {
     $container.css('height',0);
   }
@@ -66,7 +67,7 @@ $(function() {
     function resizeFunction() {
       $('.toggle-panel').each(function() {
         var $container = $($(this).data('container'));
-        $container.css('height',$container.children('.oncanvas').height());
+        $container.css('height',$container.find('.oncanvas').height());
       });
     }
 
@@ -76,9 +77,10 @@ $(function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(resizeFunction, 500);
     }).resize();
-});
 
-// Timeline toggles
-$('.toggle-timeline').click(function() {
-  $($(this).data('target')).slideToggle();
+    // Timeline toggles
+    $('.toggle-timeline').click(function() {
+      $($(this).data('target')).slideToggle();
+      $(window).resize();
+    });
 });

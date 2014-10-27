@@ -361,14 +361,16 @@ section {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
+	width: inherit;
 	//height: 100%;
 	transition: all 0.3s;
 	&.oncanvas {
 		left: 0;
+		//display: block;
 	}
 	&.offcanvas {
 		left: -400%;
+		//display: none;
 	}
 }
 
@@ -376,22 +378,25 @@ section {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
+	width: inherit;
 	transition: all 0.3s;
 	&.oncanvas {
 		left: 0;
+		//display: block;
 	}
 	&.offcanvas {
-		left: 300%;
+		left: 400%;
+		//display: none;
 	}
 }
 
 .slide-panel {
 	position: relative;
 	transition: all 0.3s;
+	width: inherit;
 }
 
-.timeline-body {
+.timeline-body, .list-group {
 	transition: all 0.3s;
 	.offcanvas {
 		display: none
